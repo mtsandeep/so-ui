@@ -1,0 +1,59 @@
+@import '~assets/styles/variables';
+
+.stripes {
+  display: flex;
+
+  div {
+    height: 0.5rem;
+  }
+}
+
+.sectionM {
+  background: $color1;
+  flex: 13;
+}
+
+.sectionT {
+  background: $color6;
+  flex: 20;
+}
+
+.sectionS {
+  background: $color3;
+  flex: 19;
+}
+
+.sectionA {
+  background: $color2;
+  flex: 1;
+}
+
+.sectionN {
+  background: $color5;
+  flex: 14;
+}
+
+.sectionD {
+  background: $color6;
+  flex: 4;
+}
+
+.sectionE {
+  background: $color1;
+  flex: 5;
+}
+
+.sectionP {
+  background: $color5;
+  flex: 16;
+}
+
+.header {
+  background: $color4;
+  border-bottom: 1px solid darken($color4, 20%);
+  box-shadow: 0px 2px 6px -1px darken($color4, 10%);
+
+  h1 {
+    margin: 1rem 0;
+  }
+}
