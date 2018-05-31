@@ -1,0 +1,59 @@
+@import './normalize';
+@import './variables';
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: $baseFontSize;
+}
+body {
+  font-size: 1.6rem;
+}
+
+a {
+  color: $color1;
+  text-decoration: none;
+  &:hover {
+    color: darken($color1, 20%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 1.5rem;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.boxShadow {
+  box-shadow: 0px 1px 5px 0 lighten($color2, 60%);
+}
+
+:global {
+  .wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
