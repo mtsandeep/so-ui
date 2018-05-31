@@ -7,3 +7,14 @@ $color4: rgba(252, 252, 252, 1);
 $color5: rgba(210, 248, 152, 1);
 
 $color6: rgba(247, 23, 53, 1);
+
+.boxShadow {
+  box-shadow: 0px 1px 5px 0 lighten($color2, 60%);
+}
+
+:global {
+  .wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}

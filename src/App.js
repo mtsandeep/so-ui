@@ -1,16 +1,17 @@
 import React from 'react';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-
 import createHistory from 'history/createBrowserHistory';
-
 import {
   ConnectedRouter,
   routerReducer,
   routerMiddleware
 } from 'react-router-redux';
 
+import 'assets/styles/styles.scss';
+
 //import reducers from "store/reducers";
+
 import Routes from './routes';
 
 const history = createHistory();
