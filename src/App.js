@@ -7,6 +7,8 @@ import {
   routerReducer,
   routerMiddleware
 } from 'react-router-redux';
+import promiseMiddleware from 'redux-promise';
+import thunkMiddleware from 'redux-thunk';
 
 import 'assets/styles/styles.scss';
 
@@ -23,7 +25,9 @@ const store = createStore(
     ...reducers,
     router: routerReducer
   }),
-  composeEnhancers(applyMiddleware(middleware))
+  composeEnhancers(
+    applyMiddleware(middleware, promiseMiddleware, thunkMiddleware)
+  )
 );
 
 const App = () => (
