@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import {
@@ -10,18 +10,20 @@ import {
 
 import 'assets/styles/styles.scss';
 
-//import reducers from "store/reducers";
+import * as reducers from 'store';
 
 import Routes from './routes';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   combineReducers({
-    //...reducers,
+    ...reducers,
     router: routerReducer
   }),
-  applyMiddleware(middleware)
+  composeEnhancers(applyMiddleware(middleware))
 );
 
 const App = () => (
